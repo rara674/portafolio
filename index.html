@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rony Hércules | Portfolio</title>
+  <meta name="description" content="Portfolio of Rony Hércules, Application Development student and Python developer. Bilingual EN/ES.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav__logo">&lt;RH /&gt;</a>
+
+    <nav class="nav__menu" id="nav-menu" aria-label="Main">
+      <a href="#about" class="nav__link" data-i18n="nav.about">About</a>
+      <a href="#projects" class="nav__link" data-i18n="nav.projects">Projects</a>
+      <a href="#skills" class="nav__link" data-i18n="nav.skills">Skills</a>
+      <a href="#experience" class="nav__link" data-i18n="nav.experience">Experience</a>
+      <a href="#contact" class="nav__link" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="nav__actions">
+      <button class="icon-btn" id="lang-toggle" aria-label="Cambiar a español" title="Español / English">ES</button>
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode" title="Dark / Light">
+        <span class="theme-icon" aria-hidden="true">☾</span>
+      </button>
+      <button class="icon-btn nav__burger" id="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="container hero__inner">
+        <p class="hero__hello mono" data-i18n="hero.hello">Hi, my name is</p>
+        <h1 class="hero__name">Rony Hércules</h1>
+        <h2 class="hero__role">
+          <span data-i18n="hero.iam">I'm</span>
+          <span class="typed" id="typed" aria-live="polite"></span><span class="cursor" aria-hidden="true">|</span>
+        </h2>
+        <p class="hero__text" data-i18n="hero.text">
+          Application Development student at Universidad de San Pedro Sula, building Python projects
+          and learning web development. Bilingual (English/Spanish), with professional experience
+          supporting U.S. customers.
+        </p>
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary" data-i18n="hero.cta1">View my projects</a>
+          <a href="#contact" class="btn btn--ghost" data-i18n="hero.cta2">Contact me</a>
+        </div>
+        <ul class="hero__social">
+          <li><a href="https://github.com/rara674" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/rony-hercules-5732343b4" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="mailto:ronyhercules4@gmail.com">Email</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section__title"><span class="mono">01.</span> <span data-i18n="about.title">About me</span></h2>
+        <div class="about">
+          <div class="about__text">
+            <p data-i18n="about.p1">
+              I'm a first-year Application Development student from San Pedro Sula, Honduras.
+              I enjoy turning everyday problems into small, reliable programs, and I care about
+              writing code that is clear, tested and easy to maintain.
+            </p>
+            <p data-i18n="about.p2">
+              Before programming, I learned to solve problems on the phone: I've supported U.S.
+              customers for health insurance and auto finance accounts. That taught me to listen,
+              troubleshoot step by step and explain technical things in simple words.
+            </p>
+            <p data-i18n="about.p3">
+              I'm looking for a remote internship or entry-level role in software development,
+              QA testing or technical support.
+            </p>
+          </div>
+          <ul class="about__facts">
+            <li><span class="fact__num" data-count="24">0</span><span data-i18n="about.f1">automated tests written</span></li>
+            <li><span class="fact__num" data-count="2">0</span><span data-i18n="about.f2">languages, EN / ES</span></li>
+            <li><span class="fact__num" data-count="60">0</span><span data-i18n="about.f3">customer contacts handled per day</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section__title"><span class="mono">02.</span> <span data-i18n="projects.title">Projects</span></h2>
+
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button class="filter is-active" data-filter="all" data-i18n="projects.all">All</button>
+          <button class="filter" data-filter="python">Python</button>
+          <button class="filter" data-filter="web">Web</button>
+        </div>
+
+        <div class="projects">
+          <article class="card" data-tags="python">
+            <div class="card__top">
+              <span class="card__icon" aria-hidden="true">✓</span>
+              <a class="card__link" href="https://github.com/rara674/gestor-tareas" target="_blank" rel="noopener" aria-label="Task Manager on GitHub">GitHub ↗</a>
+            </div>
+            <h3 class="card__title" data-i18n="p1.title">Task Manager CLI</h3>
+            <p class="card__text" data-i18n="p1.text">
+              Command-line app to create, list, complete and delete tasks with persistent JSON storage.
+              Saves atomically and backs up corrupted files so data is never lost.
+            </p>
+            <ul class="card__highlights">
+              <li data-i18n="p1.h1">24 automated tests with pytest</li>
+              <li data-i18n="p1.h2">Input validation and error handling</li>
+            </ul>
+            <ul class="tags">
+              <li>Python</li><li>JSON</li><li>pytest</li><li>Git</li>
+            </ul>
+          </article>
+
+          <article class="card" data-tags="web">
+            <div class="card__top">
+              <span class="card__icon" aria-hidden="true">◐</span>
+              <a class="card__link" href="https://github.com/rara674/portafolio" target="_blank" rel="noopener" aria-label="Portfolio source on GitHub">GitHub ↗</a>
+            </div>
+            <h3 class="card__title" data-i18n="p2.title">Personal Portfolio</h3>
+            <p class="card__text" data-i18n="p2.text">
+              This website. Responsive design built from scratch, with dark mode, an English/Spanish
+              switch, project filters and scroll animations, without any framework.
+            </p>
+            <ul class="card__highlights">
+              <li data-i18n="p2.h1">Bilingual content with one click</li>
+              <li data-i18n="p2.h2">Saves your theme and language</li>
+            </ul>
+            <ul class="tags">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li>
+            </ul>
+          </article>
+
+          <article class="card card--soon" data-tags="python web">
+            <div class="card__top">
+              <span class="card__icon" aria-hidden="true">+</span>
+            </div>
+            <h3 class="card__title" data-i18n="p3.title">Coming soon</h3>
+            <p class="card__text" data-i18n="p3.text">
+              I'm currently working on my next project. Check my GitHub to follow my progress.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section__title"><span class="mono">03.</span> <span data-i18n="skills.title">Skills</span></h2>
+        <div class="skills">
+          <div class="skills__group">
+            <h3 data-i18n="skills.g1">Languages &amp; web</h3>
+            <ul class="chips"><li>Python</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>JSON</li></ul>
+          </div>
+          <div class="skills__group">
+            <h3 data-i18n="skills.g2">Testing &amp; tools</h3>
+            <ul class="chips"><li>pytest</li><li>Git</li><li>GitHub</li><li>VS Code</li><li>Office 365</li><li>CRM</li></ul>
+          </div>
+          <div class="skills__group">
+            <h3 data-i18n="skills.g3">Professional</h3>
+            <ul class="chips">
+              <li data-i18n="skills.s1">Troubleshooting</li>
+              <li data-i18n="skills.s2">Clear communication</li>
+              <li data-i18n="skills.s3">Documentation</li>
+              <li data-i18n="skills.s4">Data privacy (HIPAA)</li>
+              <li data-i18n="skills.s5">Customer focus</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE & EDUCATION ============ -->
+    <section class="section" id="experience">
+      <div class="container">
+        <h2 class="section__title"><span class="mono">04.</span> <span data-i18n="exp.title">Experience &amp; education</span></h2>
+        <ol class="timeline">
+          <li class="timeline__item">
+            <span class="timeline__date mono" data-i18n="exp.d1">Aug 2026 – Present</span>
+            <h3>IntouchCX <span class="muted" data-i18n="exp.r1">· Customer Service Agent</span></h3>
+            <p data-i18n="exp.t1">Hyundai Motor Finance account. Resolve account, payment and contract inquiries
+              for U.S. customers, handling up to 60 contacts per day and documenting every case in CRM systems.</p>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__date mono" data-i18n="exp.d2">2026 – 2031 (expected)</span>
+            <h3>Universidad de San Pedro Sula <span class="muted" data-i18n="exp.r2">· Application Development</span></h3>
+            <p data-i18n="exp.t2">Bachelor's studies in progress, focused on programming and software development.</p>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__date mono" data-i18n="exp.d3">Oct 2025 – Apr 2026</span>
+            <h3>Alorica <span class="muted" data-i18n="exp.r3">· Bilingual Customer Service Agent</span></h3>
+            <p data-i18n="exp.t3">UnitedHealthcare Individual Plans. Handled 30–45 calls per day on billing,
+              coverage and claims, managing member data in compliance with HIPAA.</p>
+          </li>
+          <li class="timeline__item">
+            <span class="timeline__date mono">2025</span>
+            <h3>Villasturias Academy <span class="muted" data-i18n="exp.r4">· High School Diploma</span></h3>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="container contact__inner">
+        <h2 class="section__title section__title--center"><span class="mono">05.</span> <span data-i18n="contact.title">Let's talk</span></h2>
+        <p data-i18n="contact.text">
+          I'm open to remote internships and entry-level opportunities. If you think I could be a good fit
+          for your team, I'd love to hear from you.
+        </p>
+        <div class="contact__email">
+          <a href="mailto:ronyhercules4@gmail.com" class="btn btn--primary">ronyhercules4@gmail.com</a>
+          <button class="btn btn--ghost" id="copy-email" data-email="ronyhercules4@gmail.com" data-i18n="contact.copy">Copy email</button>
+        </div>
+        <p class="toast" id="toast" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Rony Hércules · <span data-i18n="footer.made">Built with HTML, CSS &amp; JavaScript</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
